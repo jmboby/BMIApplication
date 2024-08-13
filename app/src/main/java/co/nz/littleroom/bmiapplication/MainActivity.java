@@ -1,6 +1,7 @@
 package co.nz.littleroom.bmiapplication;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,6 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Toast.makeText(this, "A wee toast alert!", Toast.LENGTH_LONG).show();
     }
 }
