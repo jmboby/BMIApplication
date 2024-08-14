@@ -1,9 +1,11 @@
 package co.nz.littleroom.bmiapplication;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        findViewById(R.id.text_view_result);
+        // findViewById(R.id.text_view_result);
 
         RadioButton maleRadioButton = findViewById(R.id.radio_button_male);
         RadioButton femaleRadioButton = findViewById(R.id.radio_button_female);
@@ -35,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
         Button calculateButton = findViewById(R.id.button_calculate);
         TextView resultText = findViewById(R.id.text_view_result);
 
+        calculateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Calculate Button Clicked", Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 }
